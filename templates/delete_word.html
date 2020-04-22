@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить слово</title>
+</head>
+
+<body>
+    {% include 'navigation.html' %}
+    <h3>Удалить слово "{{ word }}"?</h3>
+    <form action="" method="post">
+        <button type="submit">Удалить</button>
+        <input type="button" onclick="history.back()" value="Отмена">
+    </form>
+</body>
+
+</html>

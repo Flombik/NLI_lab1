@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лексемы</title>
+</head>
+
+<body>
+    {% include 'navigation.html' %}
+    <ol>
+        {% for lexeme in lexemes %}
+        {% if lexeme.words %}
+        <li> {{ lexeme.normal_form }}
+            
+            <select>
+                {% for word in lexeme.words %}
+                <option>{{ word.word }}</option>
+                {% endfor %}
+            </select>
+        </li>
+        <br> <br>
+        {% endif %}
+        {% endfor %}
+    </ol>
+</body>
+
+</html>
